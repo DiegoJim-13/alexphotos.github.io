@@ -1,21 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import UnderConstruction from './components/UnderConstruction';
 
 function App() {
   return (
     <div className="App">
-      <h1>Alex's Photos!</h1>
+      <head>Page Name</head>
+      <h1 className="App-name">Alex's Photos!</h1>
+      <UnderConstruction emoji="🏗️"/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
