@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/alexphotos/static/css/main.073c9b0a.css",
+    "main.js": "/alexphotos/static/js/main.f2048473.js",
+    "static/js/787.7113624a.chunk.js": "/alexphotos/static/js/787.7113624a.chunk.js",
+    "static/media/logo.svg": "/alexphotos/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/alexphotos/index.html",
+    "main.073c9b0a.css.map": "/alexphotos/static/css/main.073c9b0a.css.map",
+    "main.f2048473.js.map": "/alexphotos/static/js/main.f2048473.js.map",
+    "787.7113624a.chunk.js.map": "/alexphotos/static/js/787.7113624a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.f2048473.js"
+  ]
+}
