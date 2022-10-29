@@ -1,7 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import UnderConstruction from './components/UnderConstruction';
+import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
@@ -9,9 +8,10 @@ function App() {
       <head>Page Name</head>
       <h1 className="App-name">Alex's Photos!</h1>
       <UnderConstruction emoji="🏗️"/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Link to="/">Home</Link> | {" "}
+      <Link to="/portfolio">Portfolio</Link> | {" "}
+      <Link to="/portfolio/dogs">Dogs</Link>
+      <Outlet/>
     </div>
   );
 }
