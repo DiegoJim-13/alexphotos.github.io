@@ -10,24 +10,27 @@ import Dogs from "./routes/dogs";
 import About from "./routes/about";
 import Nature from "./routes/nature";
 import Weddings from "./routes/weddings";
+import "./i18n";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/dogs" element={<Dogs />} />
-          <Route path="/portfolio/nature" element={<Nature />} />
-          <Route path="/portfolio/weddings" element={<Weddings />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+    <React.Suspense fallback="Loading...">
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/dogs" element={<Dogs />} />
+            <Route path="/portfolio/nature" element={<Nature />} />
+            <Route path="/portfolio/weddings" element={<Weddings />} />
+          </Route>
+        </Routes>
+      </HashRouter>
+    </React.Suspense>
   </React.StrictMode>
 );
 

@@ -1,7 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled/macro";
 import { PRIMARY, SECONDARY, TERTIARY } from "../constants/colors";
+import { useTranslation } from "react-i18next";
 
 const StyledNav = styled.div`
   text-align: center;
@@ -14,7 +14,7 @@ const StyledNav = styled.div`
   border-style: double;
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   padding: 0.25rem;
   color: ${TERTIARY};
   font-weight: 600;
@@ -36,7 +36,6 @@ const DropdownItem = styled.div`
   background-color: ${SECONDARY};
   :hover {
     background-color: ${PRIMARY};
-    color: black;
   }
 `;
 
@@ -48,30 +47,31 @@ const Dropdown = styled.div`
   }
 `;
 
-class Nav extends React.Component {
-  render() {
-    return (
-      <StyledNav>
-        <StyledLink to="/">Home</StyledLink>
-        {" | "}
-        <StyledLink to="/about">About</StyledLink>
-        {" | "}
-        <Dropdown>
-          <StyledLink to="/portfolio">Portfolio</StyledLink>
-          <DropdownContent>
-            <DropdownItem>
-              <StyledLink to="/portfolio/dogs">Dogs</StyledLink>
-            </DropdownItem>
-            <DropdownItem>
-              <StyledLink to="/portfolio/nature">Nature</StyledLink>
-            </DropdownItem>
-            <DropdownItem>
-              <StyledLink to="/portfolio/weddings">Weddings</StyledLink>
-            </DropdownItem>
-          </DropdownContent>
-        </Dropdown>
-      </StyledNav>
-    );
-  }
+function Nav() {
+  const { t } = useTranslation();
+
+  return (
+    <StyledNav>
+      <StyledLink to="/">{t("home")}</StyledLink>
+      {" | "}
+      <StyledLink to="/about">{t("about")}</StyledLink>
+      {" | "}
+      <Dropdown>
+        <StyledLink to="/portfolio">{t("portfolio")}</StyledLink>
+        <DropdownContent>
+          <DropdownItem>
+            <StyledLink to="/portfolio/dogs">{t("dogs")}</StyledLink>
+          </DropdownItem>
+          <DropdownItem>
+            <StyledLink to="/portfolio/nature">{t("nature")}</StyledLink>
+          </DropdownItem>
+          <DropdownItem>
+            <StyledLink to="/portfolio/weddings">{t("weddings")}</StyledLink>
+          </DropdownItem>
+        </DropdownContent>
+      </Dropdown>
+    </StyledNav>
+  );
 }
+
 export default Nav;

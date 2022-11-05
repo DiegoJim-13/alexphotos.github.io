@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../logo.svg";
 import styled from "@emotion/styled";
 import { css } from "@emotion/css";
@@ -18,17 +17,13 @@ const AppLogoStyle = css`
   pointer-events: none;
 `;
 
-interface HomePageProps {}
-
-class HomePage extends React.Component<HomePageProps> {
-  render() {
-    return (
-      <div>
-        <AppHeaderStyle>
-          <img src={logo} className={AppLogoStyle} alt="logo" />
-        </AppHeaderStyle>
-      </div>
-    );
-  }
+function HomePage() {
+  return (
+    <div>
+      <AppHeaderStyle>
+        <img src={logo} className={AppLogoStyle} alt="logo" />
+      </AppHeaderStyle>
+    </div>
+  );
 }
 export default HomePage;
