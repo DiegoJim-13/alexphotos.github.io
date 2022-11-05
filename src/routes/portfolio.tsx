@@ -1,8 +1,6 @@
 import React from "react";
 
-interface PortfolioProps {}
-
-class Portfolio extends React.Component<PortfolioProps> {
+class Portfolio extends React.Component {
   render() {
     return <div>Portfolio</div>;
   }

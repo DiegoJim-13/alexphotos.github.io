@@ -1,17 +1,29 @@
 import React from "react";
-import benny1 from "../photos/benny1.jpg";
-import benny2 from "../photos/benny2.jpg";
-import benny3 from "../photos/benny3.jpg";
+import styled from "@emotion/styled";
 
-interface DogsProps {}
+const StyledImage = styled.img`
+  max-width: 100%;
+`;
 
-class Dogs extends React.Component<DogsProps> {
+class Dogs extends React.Component {
   render() {
     return (
       <div>
-        <img src={benny1} className="photo" alt={"benny1"} />
-        <img src={benny2} className="photo" alt={"benny2"} />
-        <img src={benny3} className="photo" alt={"benny3"} />
+        <StyledImage
+          src={"https://i.imgur.com/uF4sPDT.jpeg"}
+          className="photo"
+          alt={"benny1"}
+        />
+        <StyledImage
+          src={"https://i.imgur.com/bZFOzCN.jpg"}
+          className="photo"
+          alt={"benny2"}
+        />
+        <StyledImage
+          src={"https://i.imgur.com/GbTFIME.jpg"}
+          className="photo"
+          alt={"benny3"}
+        />
       </div>
     );
   }
