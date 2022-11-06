@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import styled from "@emotion/styled/macro";
-import { PRIMARY, SECONDARY, TERTIARY } from "../constants/colors";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { PRIMARY, SECONDARY, TERTIARY } from "../constants/colors";
 
 const StyledNav = styled.div`
   text-align: center;

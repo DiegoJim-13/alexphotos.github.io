@@ -1,9 +1,9 @@
-import { Outlet } from "react-router-dom";
-import Nav from "./components/Nav";
 import styled from "@emotion/styled";
-import { TERTIARY } from "./constants/colors";
-import Footer from "./components/Footer";
 import { useTranslation } from "react-i18next";
+import { Outlet } from "react-router-dom";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import { TERTIARY } from "./constants/colors";
 
 const AppTitle = styled.h1`
   text-align: center;

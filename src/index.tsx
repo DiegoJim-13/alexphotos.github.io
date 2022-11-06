@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import Portfolio from "./routes/portfolio";
-import HomePage from "./routes/homePage";
-import Dogs from "./routes/dogs";
-import About from "./routes/about";
-import Nature from "./routes/nature";
-import Weddings from "./routes/weddings";
+import App from "./App";
 import "./i18n";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import About from "./routes/about";
+import Dogs from "./routes/dogs";
+import HomePage from "./routes/homePage";
+import Nature from "./routes/nature";
+import Portfolio from "./routes/portfolio";
+import Weddings from "./routes/weddings";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

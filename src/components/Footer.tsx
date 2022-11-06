@@ -1,8 +1,8 @@
 import styled from "@emotion/styled/macro";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import { BACKGROUND, PRIMARY, TERTIARY } from "../constants/colors";
 import { StyledLink } from "./Nav";
-import { useTranslation } from "react-i18next";
-import i18next from "i18next";
 
 const StyledFooter = styled.div`
   background-color: ${BACKGROUND};
